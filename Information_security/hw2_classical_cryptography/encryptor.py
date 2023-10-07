@@ -5,6 +5,7 @@ import random
 BLOCK_PIXEL_SIZE = 3
 articles_path = './large_articles.txt'
 encrypted_articles_path = './large_encrypted_articles.png'
+key_path = './key.txt'
 
 """Step 1"""
 with open(articles_path, 'r', encoding='utf-8') as file:
@@ -69,6 +70,6 @@ for i, chunk_index in enumerate(load_order):
         image[chunk_y * BLOCK_PIXEL_SIZE + color_y:chunk_y * BLOCK_PIXEL_SIZE + color_y + BLOCK_PIXEL_SIZE,
               chunk_x * BLOCK_PIXEL_SIZE + color_x:chunk_x * BLOCK_PIXEL_SIZE + color_x + BLOCK_PIXEL_SIZE] = color
 
-cv2.imwrite('encrypted_articles.png', image)
-with open('key.txt', 'w', encoding='utf-8') as file:
+cv2.imwrite(encrypted_articles_path, image)
+with open(key_path, 'w', encoding='utf-8') as file:
     file.write(key)
