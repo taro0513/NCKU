@@ -4,7 +4,9 @@ BLOCK_PIXEL_SIZE = 1
 
 encrypted_articles_path = './large_encrypted_articles.png'
 
-"""Step 1"""
+with open("key.txt", "r") as file:
+    key = file.read()
+
 image = cv2.imread(encrypted_articles_path)
 
 height, width, _ = image.shape
@@ -19,6 +21,8 @@ for y in range(0, height, BLOCK_PIXEL_SIZE):
                int(grid[:, :, 1].mean()), 
                int(grid[:, :, 2].mean()))
         rgb_values.append(rgb)
+
+
 
 """Step 4"""
 decrypted_articles = "".join(
