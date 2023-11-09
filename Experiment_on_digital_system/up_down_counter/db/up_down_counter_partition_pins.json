@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "out_7[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7[6]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "up_down",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50hz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

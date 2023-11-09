@@ -1,0 +1,31 @@
+module adder_subtractor(A, B, select, out, overflow);
+input [3:0] A,B;
+input select;
+output [3:0] out;
+output overflow;
+reg overflow;
+reg [3:0] out;
+reg [4:0] temp;
+
+
+always @(A or B or select)
+begin
+  if(select == 1'b1) begin
+  temp = A + B;
+  out = temp[3:0];
+  overflow = temp[4];
+  end
+  else begin
+  if(B > A) begin
+    temp = {1'b1, A};
+    temp = temp - B;
+    overflow = 1'b1;
+    out = temp[3:0];
+  end
+  else begin
+    out = A - B;
+    overflow = 1'b0;
+  end
+  end
+end
+endmodule

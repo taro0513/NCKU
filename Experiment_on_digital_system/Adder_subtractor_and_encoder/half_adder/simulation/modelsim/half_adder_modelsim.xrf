@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, D:/Coding/NCKU/Experiment_on_digital_system/Adder_subtractor_and_encoder/half_adder/half_adder.v
+source_file = 1, D:/Coding/NCKU/Experiment_on_digital_system/Adder_subtractor_and_encoder/half_adder/Waveform.vwf
+source_file = 1, D:/Coding/NCKU/Experiment_on_digital_system/Adder_subtractor_and_encoder/half_adder/db/half_adder.cbx.xml
+design_name = half_adder
+instance = comp, \carry~output , carry~output, half_adder, 1
+instance = comp, \sum~output , sum~output, half_adder, 1
+instance = comp, \b~input , b~input, half_adder, 1
+instance = comp, \a~input , a~input, half_adder, 1
+instance = comp, \comb~0 , comb~0, half_adder, 1
+instance = comp, \comb~1 , comb~1, half_adder, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, half_adder, 1
